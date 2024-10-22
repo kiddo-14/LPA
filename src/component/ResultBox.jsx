@@ -28,9 +28,9 @@ const Result = ({Email,pdf, rules}) => {
 
                  </div>
           </div>  
-          <div className='mx-auto w-fit'>
+          <div className='mx-auto max-md:w-8/12 w-fit'>
             
-           <button className=" p-3 mx-auto w-fit text-2xl border mt-10 text-gray-900 bg-white shadow-md focus:border-gray-300
+           <button className="  p-3 mx-auto w-fit text-2xl border mt-10 text-gray-900 bg-white shadow-md focus:border-gray-300
             hover:bg-blue-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-md  
             sm:text-hidden" onClick={handleReset} >
            

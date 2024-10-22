@@ -60,12 +60,12 @@ const FormBox = ({ Email, setEmail, setPdfName,  rules, setRules }) => {
   return (
     <>
       <form className="relative mt-5 p-2 w-full overflow-y-auto">
-        <div className="lg:flex lg:justify-between w-full">
-          <div className="ml-4 h-20 flex items-center justify-between lg:w-1/3 p-2 ">
-            <label htmlFor="input-group-1" className="block mb-2 ml-4  font-medium text-gray-900 md:text-3xl dark:text-white">
-              Enter Email
+        <div className="lg:flex max-lg:justify-between w-full">
+          <div className="ml-4 mr-12 h-20 flex   items-center justify-between max-xl:justify-start max-lg:w-11/12 max-xl:flex-col p-2 ">
+            <label htmlFor="input-group-1" className="block mb-2 ml-4 mr-10  font-medium text-gray-900 text-3xl lg:text-2xl dark:text-white">
+               Email
             </label>
-            <div className="relative w-8/12">
+            <div className="relative w-full">
               <div className="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
                 <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
                   <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z" />
@@ -82,21 +82,21 @@ const FormBox = ({ Email, setEmail, setPdfName,  rules, setRules }) => {
               />
             </div>
           </div>
-          <div className="mt-3 ml-10 lg:w-2/3 flex flex-col lg:ml-20">
-          <div className='flex ml-10 w-11/12 justify-start items-center'>
+          <div className="max-lg:mt-10 lg:w-2/3 flex flex-col xl:ml-20 lg:ml-8">
+          <div className='flex w-11/12 justify-start max-lg:w-full  max-xl:flex-col items-center '>
 
-            <label className="block mb-2 w-1/3 md:text-3xl font-medium text-gray-900 dark:text-white" htmlFor="large_size">
+            <label className="block  mb-2 xl:w-1/3 max-lg:w-fit  text-3xl max-lg:text-start font-medium text-gray-900 dark:text-white" htmlFor="large_size">
               Upload file input
             </label>
             <input
-              className="block shadow-md md:ml-14 lg:mr-32 p-3 w-3/4 text-lg text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-black-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+              className="block shadow-md   p-3 w-11/12 text-lg text-gray-900 border  border-gray-300 rounded-lg cursor-pointer bg-black-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
               id="large_size"
               type="file"
               onChange={handleFileChange}
               />
               </div>
             {/* Display PDF error message if any */}
-        {pdfError && <div className=" mt-1 ml-96 text-red-500 w-fit">{pdfError}</div>}
+        {pdfError && <div className=" mt-1 max-md:ml-4 max-lg:ml-7 max-xl:ml-8 ml-80  text-red-500 w-9/12">{pdfError}</div>}
           </div>
         </div>
 
@@ -122,7 +122,7 @@ const FormBox = ({ Email, setEmail, setPdfName,  rules, setRules }) => {
 
           {/* Button to Generate Summary */}
           <button
-            className={`p-3 w-96 text-2xl border mx-auto mt-8 text-gray-900 bg-white focus:border-gray-300 hover:bg-blue-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-md shadow-md ${isButtonDisabled ? 'opacity-50 cursor-not-allowed' : ''}`}
+            className={`p-3 w-96 max-md:w-11/12 text-2xl border mx-auto mt-8 text-gray-900 bg-white focus:border-gray-300 hover:bg-blue-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-md shadow-md ${isButtonDisabled ? 'opacity-50 cursor-not-allowed' : ''}`}
             onClick={handleResult}
             disabled={isButtonDisabled} // Disable the button based on conditions
           >
